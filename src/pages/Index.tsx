@@ -6,21 +6,20 @@ import { OSOverlay } from "@/components/OSOverlay"
 export default function HomePage() {
   return (
     <>
-      {/* Landing Page - Fixed height, no scroll */}
-      <div className="h-screen bg-[#FAFAFA] flex flex-col items-center justify-center p-8 relative overflow-hidden">
-        {/* Neo-brutal grid background */}
+      <div className="h-screen bg-[#F0F7FA] flex flex-col items-center justify-center p-8 relative overflow-hidden">
+        {/* Grid background */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              linear-gradient(to right, #000 1px, transparent 1px),
-              linear-gradient(to bottom, #000 1px, transparent 1px)
+              linear-gradient(to right, #1A6B8A 1px, transparent 1px),
+              linear-gradient(to bottom, #1A6B8A 1px, transparent 1px)
             `,
             backgroundSize: "8px 8px",
           }}
         />
 
-        {/* Subtle grain texture */}
+        {/* Grain texture */}
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -29,13 +28,14 @@ export default function HomePage() {
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 max-w-lg w-full">
-          {/* AI Robot */}
           <div className="flex flex-col items-center space-y-4 mb-8">
             <AnimatedRobot />
-            <h1 className="text-4xl font-black text-center">Привет.</h1>
+            <div className="text-center">
+              <h1 className="text-4xl font-black">Вирджиния Апгар</h1>
+              <p className="text-[#1A6B8A] font-bold mt-1 text-lg">Врач, изменившая неонатологию</p>
+            </div>
           </div>
 
-          {/* Chat Panel */}
           <ChatPanel />
         </div>
 
@@ -44,7 +44,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* OS Overlay */}
       <OSOverlay />
     </>
   )
